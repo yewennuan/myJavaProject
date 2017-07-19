@@ -1,5 +1,9 @@
 package com.johu.java.concurrent.locks;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Created by yewen on 2017/5/24.
  */
