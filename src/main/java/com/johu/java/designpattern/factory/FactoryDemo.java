@@ -1,4 +1,4 @@
-package com.johu.java.designpattern;
+package com.johu.java.designpattern.factory;
 
 /**
  * 工厂模式分3中. 1.简单工厂模式 2.工厂模式 3.抽象工厂模式
@@ -8,5 +8,25 @@ package com.johu.java.designpattern;
  * Created by johu on 17-8-25.
  */
 public class FactoryDemo {
+    public static void main(String[] args) {
+        SimpleFactoryDemo simpleFactoryDemo = new SimpleFactoryDemo();
+        Product product = simpleFactoryDemo.getProduct(1);
+
+    }
+
 
 }
+
+class SimpleFactoryDemo{
+    public Product getProduct(int type){
+        switch (type){
+            case 1:
+                return new ProductA();
+            case 2:
+                return new ProductB();
+        }
+        return null;
+    }
+}
+
+
