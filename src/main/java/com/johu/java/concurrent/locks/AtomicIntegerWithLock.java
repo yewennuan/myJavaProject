@@ -1,5 +1,6 @@
 package com.johu.java.concurrent.locks;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -11,6 +12,8 @@ public class AtomicIntegerWithLock {
     private int value;
 
     private Lock lock = new ReentrantLock();
+
+    private Condition condition = lock.newCondition();
 
     public AtomicIntegerWithLock() {
         super();
